@@ -12,3 +12,4 @@ C:\Projects\LorenaKitchen_TestTask\LorenaKitchen_TestTask\obj\Debug\LorenaKitche
 C:\Projects\LorenaKitchen_TestTask\LorenaKitchen_TestTask\obj\Debug\LorenaKitchen_TestTask.csproj.CopyComplete
 C:\Projects\LorenaKitchen_TestTask\LorenaKitchen_TestTask\obj\Debug\LorenaKitchen_TestTask.exe
 C:\Projects\LorenaKitchen_TestTask\LorenaKitchen_TestTask\obj\Debug\LorenaKitchen_TestTask.pdb
+C:\Projects\LorenaKitchen_TestTask\LorenaKitchen_TestTask\obj\Debug\LorenaKitchen_TestTask.csproj.AssemblyReference.cache
