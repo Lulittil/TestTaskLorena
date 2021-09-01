@@ -112,6 +112,10 @@ namespace LorenaKitchen_TestTask
                         $"VALUES('{textBox1.Text}',{Convert.ToDouble(textBox2.Text)},{addit},'{textBox4.Text}',{par_id})";
             comm.ExecuteNonQuery();
             conn.Close();
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -155,12 +159,23 @@ namespace LorenaKitchen_TestTask
             List_Salons salone_list = new List_Salons(temp_list);
             string temp_name_salon = Convert.ToString(dataGridView1.CurrentRow.Cells[1].Value);
             int index_column = dataGridView1.CurrentRow.Index;
-
-            double temp_price = temp_list[index_column].SetPrice(Convert.ToDouble(textBox5.Text), salone_list.GetParentDiscount(index_column + 1));
-            MessageBox.Show(Convert.ToString(temp_price));
+            double temp_price = Convert.ToDouble(textBox5.Text);
+            double temp_result = temp_list[index_column].SetPrice(Convert.ToDouble(textBox5.Text), salone_list.GetParentDiscount(index_column + 1));
             conn.Open();
-            comm.CommandText = "INSERT INTO Reports(name_salon,price.result) VALUES ()";
+            comm.CommandText = $"INSERT INTO Reports(name_salon,price,result) VALUES ('{temp_name_salon}',@price,@result)";
+            comm.Parameters.AddWithValue("@price", temp_price);
+            comm.Parameters.AddWithValue("@result", temp_result);
+            comm.ExecuteNonQuery();
             conn.Close();
+
+            conn.Open();
+            DataSet setter = new DataSet();
+            string comtext = "Select * From Reports";
+            SQLiteDataAdapter adapter = new SQLiteDataAdapter(comtext, conn);
+            adapter.Fill(setter);
+            dataGridView2.DataSource = setter.Tables[0].DefaultView;
+            conn.Close();
+            textBox5.Text = "";
 
         }
 
