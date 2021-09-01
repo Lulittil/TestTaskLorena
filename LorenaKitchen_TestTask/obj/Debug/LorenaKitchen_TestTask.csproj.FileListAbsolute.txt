@@ -1,0 +1,14 @@
+C:\Projects\LorenaKitchen_TestTask\LorenaKitchen_TestTask\bin\Debug\LorenaKitchen_TestTask.exe.config
+C:\Projects\LorenaKitchen_TestTask\LorenaKitchen_TestTask\bin\Debug\LorenaKitchen_TestTask.exe
+C:\Projects\LorenaKitchen_TestTask\LorenaKitchen_TestTask\bin\Debug\LorenaKitchen_TestTask.pdb
+C:\Projects\LorenaKitchen_TestTask\LorenaKitchen_TestTask\bin\Debug\Lorena_Library_Salons.dll
+C:\Projects\LorenaKitchen_TestTask\LorenaKitchen_TestTask\bin\Debug\nunit.framework.dll
+C:\Projects\LorenaKitchen_TestTask\LorenaKitchen_TestTask\bin\Debug\Lorena_Library_Salons.pdb
+C:\Projects\LorenaKitchen_TestTask\LorenaKitchen_TestTask\bin\Debug\nunit.framework.xml
+C:\Projects\LorenaKitchen_TestTask\LorenaKitchen_TestTask\obj\Debug\LorenaKitchen_TestTask.Form1.resources
+C:\Projects\LorenaKitchen_TestTask\LorenaKitchen_TestTask\obj\Debug\LorenaKitchen_TestTask.Properties.Resources.resources
+C:\Projects\LorenaKitchen_TestTask\LorenaKitchen_TestTask\obj\Debug\LorenaKitchen_TestTask.csproj.GenerateResource.cache
+C:\Projects\LorenaKitchen_TestTask\LorenaKitchen_TestTask\obj\Debug\LorenaKitchen_TestTask.csproj.CoreCompileInputs.cache
+C:\Projects\LorenaKitchen_TestTask\LorenaKitchen_TestTask\obj\Debug\LorenaKitchen_TestTask.csproj.CopyComplete
+C:\Projects\LorenaKitchen_TestTask\LorenaKitchen_TestTask\obj\Debug\LorenaKitchen_TestTask.exe
+C:\Projects\LorenaKitchen_TestTask\LorenaKitchen_TestTask\obj\Debug\LorenaKitchen_TestTask.pdb

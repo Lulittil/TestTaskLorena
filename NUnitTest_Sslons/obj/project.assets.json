@@ -45,6 +45,15 @@
         "build": {
           "build/net35/NUnit3TestAdapter.props": {}
         }
+      },
+      "LorenaKitchen_TestTask/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/LorenaKitchen_TestTask.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LorenaKitchen_TestTask.dll": {}
+        }
       }
     }
   },
@@ -156,10 +165,16 @@
         "nunit3testadapter.3.16.1.nupkg.sha512",
         "nunit3testadapter.nuspec"
       ]
+    },
+    "LorenaKitchen_TestTask/1.0.0": {
+      "type": "project",
+      "path": "../LorenaKitchen_TestTask/LorenaKitchen_TestTask.csproj",
+      "msbuildProject": "../LorenaKitchen_TestTask/LorenaKitchen_TestTask.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
+      "LorenaKitchen_TestTask >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "NUnit >= 3.12.0",
       "NUnit3TestAdapter >= 3.16.1"
@@ -196,7 +211,11 @@
       "frameworks": {
         "net472": {
           "targetAlias": "net472",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Projects\\LorenaKitchen_TestTask\\LorenaKitchen_TestTask\\LorenaKitchen_TestTask.csproj": {
+              "projectPath": "C:\\Projects\\LorenaKitchen_TestTask\\LorenaKitchen_TestTask\\LorenaKitchen_TestTask.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

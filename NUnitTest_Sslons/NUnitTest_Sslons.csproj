@@ -9,7 +9,17 @@
   <ItemGroup>
     <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0"/>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LorenaKitchen_TestTask\LorenaKitchen_TestTask.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Lorena_Library_Salons">
+      <HintPath>..\Lorena_Library_Salons\bin\Debug\Lorena_Library_Salons.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

@@ -4,6 +4,16 @@
     "C:\\Projects\\LorenaKitchen_TestTask\\NUnitTest_Sslons\\NUnitTest_Sslons.csproj": {}
   },
   "projects": {
+    "C:\\Projects\\LorenaKitchen_TestTask\\LorenaKitchen_TestTask\\LorenaKitchen_TestTask.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\LorenaKitchen_TestTask\\LorenaKitchen_TestTask\\LorenaKitchen_TestTask.csproj",
+        "projectName": "LorenaKitchen_TestTask",
+        "projectPath": "C:\\Projects\\LorenaKitchen_TestTask\\LorenaKitchen_TestTask\\LorenaKitchen_TestTask.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
     "C:\\Projects\\LorenaKitchen_TestTask\\NUnitTest_Sslons\\NUnitTest_Sslons.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -31,7 +41,11 @@
         "frameworks": {
           "net472": {
             "targetAlias": "net472",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Projects\\LorenaKitchen_TestTask\\LorenaKitchen_TestTask\\LorenaKitchen_TestTask.csproj": {
+                "projectPath": "C:\\Projects\\LorenaKitchen_TestTask\\LorenaKitchen_TestTask\\LorenaKitchen_TestTask.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
