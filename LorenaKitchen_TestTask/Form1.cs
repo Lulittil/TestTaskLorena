@@ -42,7 +42,13 @@ namespace LorenaKitchen_TestTask
                 MessageBox.Show("Connected");
                 conn.Close();
 
-                
+                conn.Open();
+                comm.Connection = conn;
+                comm.CommandText = "CREATE TABLE IF NOT EXISTS Reports(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, name_salon nvarchar(100) not null, price DOUBLE NOT NULL, result DOUBLE NOT NULL)";
+                comm.ExecuteNonQuery();
+                conn.Close();
+
+
 
                 conn.Open();
                 comm.CommandText = "SELECT COUNT(*) FROM Salone";
@@ -122,12 +128,45 @@ namespace LorenaKitchen_TestTask
         private void button4_Click(object sender, EventArgs e)
         {
             conn.Open();
-            DataSet setter = new DataSet();
-            string comtext = "Select * From Salone";
-            SQLiteDataAdapter adapter = new SQLiteDataAdapter(comtext, conn);
-            adapter.Update(setter);
-            dataGridView1.DataSource = setter.Tables[0].DefaultView;
+            int column_index = dataGridView1.CurrentCell.ColumnIndex;
+            string name_column = dataGridView1.Columns[column_index].HeaderText;
+            if(name_column=="description"||name_column=="name_salon")
+            {
+                comm.CommandText = $"UPDATE Salone  SET {name_column}='{Convert.ToString(dataGridView1.CurrentCell.Value)}'";
+            }
+            else
+            {
+                comm.CommandText = $"UPDATE Salone  SET {name_column}={dataGridView1.CurrentCell.Value}";
+            }
+            
             conn.Close();
+        }
+
+        public void Add_information_at_list()
+        {
+            List<Salons> temp_list = new List<Salons>();
+            
+            for(int i=0;i<dataGridView1.Rows.Count;i++)
+            {
+                Salons temp = new Salons(Convert.ToInt32(dataGridView1.Rows[i].Cells[0].Value), Convert.ToString(dataGridView1.Rows[i].Cells[1].Value), Convert.ToDouble(dataGridView1.Rows[i].Cells[2].Value), Convert.ToString(dataGridView1.Rows[i].Cells[4].Value), Convert.ToInt32(dataGridView1.Rows[i].Cells[5].Value));
+                temp_list.Add(temp);
+                
+            }
+            List_Salons salone_list = new List_Salons(temp_list);
+            string temp_name_salon = Convert.ToString(dataGridView1.CurrentRow.Cells[1].Value);
+            int index_column = dataGridView1.CurrentRow.Index;
+
+            double temp_price = temp_list[index_column].SetPrice(Convert.ToDouble(textBox5.Text), salone_list.GetParentDiscount(index_column + 1));
+            MessageBox.Show(Convert.ToString(temp_price));
+            conn.Open();
+            comm.CommandText = "INSERT INTO Reports(name_salon,price.result) VALUES ()";
+            conn.Close();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Add_information_at_list();
         }
     }
 }
