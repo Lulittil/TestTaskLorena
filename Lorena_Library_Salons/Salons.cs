@@ -53,22 +53,6 @@ namespace Lorena_Library_Salons
 
         public double GetParentDiscount(int id)
         {
-
-            //int elem_in_list = id - 1;
-            //if (list[elem_in_list].parent_id != 0)
-            //{
-            //    elem_in_list = list[elem_in_list].parent_id;
-            //    double parent_discount = 0;
-            //    while (list[elem_in_list].parent_id != 0)
-            //    {
-            //        parent_discount += list[elem_in_list].discount;
-            //        elem_in_list = list[elem_in_list].parent_id - 1;
-            //    }
-            //    parent_discount += list[elem_in_list].discount;
-            //    return parent_discount;
-            //}
-            //else return 0;
-
             int elem_id = id-1;
             double parent_discount = 0;
             while(list[elem_id].parent_id!=0)

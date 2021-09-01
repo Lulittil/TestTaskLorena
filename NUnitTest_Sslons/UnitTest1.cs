@@ -60,7 +60,7 @@ namespace Nunit_Test_Class_Salons
             double parent_disconts=sal_list.GetParentDiscount(7);
             //set
             //expected = td.SetPrice(136540, parent_disconts);
-            expected = td.SetPrice(136540, 11);
+            expected = td.SetPrice(136540, parent_disconts);
 
             //assert
             Assert.AreEqual(expected, actual);
