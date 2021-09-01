@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "hwY2DvEnzgJbCezoKBky+O4qd1ZgK9SthHrVoKDT/e4Tu54eyvLWq3Y8L9G4E1jfuEdJEAEzX4/xBMmXocp8YQ==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\LorenaKitchen_TestTask\\NUnitTest_Sslons\\NUnitTest_Sslons.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lulit\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
+    "C:\\Users\\lulit\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",
+    "C:\\Users\\lulit\\.nuget\\packages\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
+    "C:\\Users\\lulit\\.nuget\\packages\\nunit3testadapter\\3.16.1\\nunit3testadapter.3.16.1.nupkg.sha512"
+  ],
+  "logs": []
+}

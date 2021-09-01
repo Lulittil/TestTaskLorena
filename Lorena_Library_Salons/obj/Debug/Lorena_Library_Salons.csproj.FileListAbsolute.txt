@@ -1,0 +1,9 @@
+C:\Projects\LorenaKitchen_TestTask\Lorena_Library_Salons\bin\Debug\Lorena_Library_Salons.dll
+C:\Projects\LorenaKitchen_TestTask\Lorena_Library_Salons\bin\Debug\Lorena_Library_Salons.pdb
+C:\Projects\LorenaKitchen_TestTask\Lorena_Library_Salons\bin\Debug\nunit.framework.dll
+C:\Projects\LorenaKitchen_TestTask\Lorena_Library_Salons\bin\Debug\nunit.framework.xml
+C:\Projects\LorenaKitchen_TestTask\Lorena_Library_Salons\obj\Debug\Lorena_Library_Salons.csproj.AssemblyReference.cache
+C:\Projects\LorenaKitchen_TestTask\Lorena_Library_Salons\obj\Debug\Lorena_Library_Salons.csproj.CoreCompileInputs.cache
+C:\Projects\LorenaKitchen_TestTask\Lorena_Library_Salons\obj\Debug\Lorena_Library_Salons.csproj.CopyComplete
+C:\Projects\LorenaKitchen_TestTask\Lorena_Library_Salons\obj\Debug\Lorena_Library_Salons.dll
+C:\Projects\LorenaKitchen_TestTask\Lorena_Library_Salons\obj\Debug\Lorena_Library_Salons.pdb
