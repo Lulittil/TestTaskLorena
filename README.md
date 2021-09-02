@@ -10,9 +10,9 @@
 * Для выбора рассчетной стоимости определенного салона необходжимо нажать на этот салон в ДатаГриде
 * Необходимо нажать кнопку Report
 
-\# Файлы с BD хранятся в 
+\# Файлы с DB хранятся в 
 ```
-C:\Projects\LorenaKitchen_TestTask\LorenaKitchen_TestTask\bin\Release
+\LorenaKitchen_TestTask\LorenaKitchen_TestTask\bin\Release
 SalonsBaseDate.db
 ```
 
