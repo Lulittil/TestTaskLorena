@@ -24,10 +24,7 @@ namespace LorenaKitchen_TestTask
             comm = new SQLiteCommand();
         }
 
-        public void UpdateDataGrid()
-        {
-
-        }
+        
 
         private void Creates_Start_Tables() //Создание стартовых таблиц, если они еще не созданы
         {
@@ -105,7 +102,7 @@ namespace LorenaKitchen_TestTask
                 Creates_Start_Tables();
                 Insert_Table_if_null();
                 FillDataGrid1();
-
+                FillDataGrid2();
                 
             }
             catch (SQLiteException ex)
@@ -122,44 +119,42 @@ namespace LorenaKitchen_TestTask
 
         private void button1_Click(object sender, EventArgs e)  //Кнопка добавления нового салона в таблицу Salone
         {
-            conn.Open();
-            bool addit;
-            if (textBox3.Text != "") //Проверка на то будет ли родитель у салона, задается значение зависимости
+            if (textBox1.Text != "")
             {
-                addit = true;
-            }
-            else addit = false;
-            int par_id = 0;
-            if (textBox3.Text != "") par_id = Convert.ToInt32(textBox3.Text);
-            comm.CommandText= "INSERT INTO Salone(name_salon,discount,addiction,description,parent_id) " +
-                        $"VALUES('{textBox1.Text}',{Convert.ToDouble(textBox2.Text)},{addit},'{textBox4.Text}',{par_id})";
-            comm.ExecuteNonQuery();
-            conn.Close();
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
-            textBox4.Text = "";
+                conn.Open();
+                bool addit;
+                double disc = 0;
+                if(textBox2.Text=="")
+                {
+                    disc = 0;
+                }    
+                else disc = Convert.ToDouble(textBox2.Text);
+                if (textBox3.Text != "") //Проверка на то будет ли родитель у салона, задается значение зависимости
+                {
+                    addit = true;
+                }
+                else addit = false;
+                int par_id = 0;
+                if (textBox3.Text != "") par_id = Convert.ToInt32(textBox3.Text);
+                comm.CommandText = "INSERT INTO Salone(name_salon,discount,addiction,description,parent_id) " +
+                            $"VALUES('{textBox1.Text}',@discount,{addit},'{textBox4.Text}',{par_id})";
+                comm.Parameters.AddWithValue("@discount", disc);
+                comm.ExecuteNonQuery();
+                conn.Close();
+                textBox1.Text = "";
+                textBox2.Text = "";
+                textBox3.Text = "";
+                textBox4.Text = "";
 
-            FillDataGrid1();
+                FillDataGrid1();
+            }
+            else MessageBox.Show("Введите название салона");
         }
 
         private void button3_Click(object sender, EventArgs e)  //Обновление гридов, отслеживание изменений
         {
-            conn.Open();
-            DataSet setter = new DataSet();
-            string comtext = "Select * From Salone";
-            SQLiteDataAdapter adapter = new SQLiteDataAdapter(comtext, conn);
-            adapter.Fill(setter);
-            dataGridView1.DataSource = setter.Tables[0].DefaultView;
-            conn.Close();
-
-            conn.Open();
-            DataSet setter2 = new DataSet();
-            string comtext2 = "Select * From Salone";
-            SQLiteDataAdapter adapter2 = new SQLiteDataAdapter(comtext2, conn);
-            adapter2.Fill(setter2);
-            dataGridView2.DataSource = setter2.Tables[0].DefaultView;
-            conn.Close();
+            FillDataGrid1();
+            FillDataGrid2();
         }
 
         
@@ -207,8 +202,16 @@ namespace LorenaKitchen_TestTask
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Generate_the_report();
-            FillDataGrid2(); 
+            try
+            {
+                Generate_the_report();
+                FillDataGrid2();
+            }
+            catch
+            {
+                MessageBox.Show("Введите значение суммы или/и выберите салон в левой таблице");
+            }
+             
         }
     }
 }
