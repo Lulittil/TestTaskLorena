@@ -61,6 +61,7 @@ namespace Nunit_Test_Class_Salons
             //set
             //expected = td.SetPrice(136540, parent_disconts);
             expected = td.SetPrice(136540, parent_disconts);
+            
 
             //assert
             Assert.AreEqual(expected, actual);
